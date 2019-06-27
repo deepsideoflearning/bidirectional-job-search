@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from bs4 import BeautifulSoup
 import os
@@ -11,17 +12,21 @@ base_url = 'https://www.indeed.com'
 
 class IndeedScraper:
 
-    def __init__(self, job_title, key_words, location='', starting_page=1):
+    def __init__(self, job_title, key_words, location='', starting_page=1, radius=25):
         """
         Args:
              job_title: string, title used when searching for jobs on indeed.com
+             key_words: list of strings, key words that should be in the job titles to help remove ads
              location: string, location used when searching for jobs on indeed.com
+             starting_page: int, page number which the user wants to start on
+             radius: int, maximum distance in miles from given location that a job can be
         """
 
         self.job_title = job_title
         self.location = location
         self.page_number = starting_page
         self.key_words = key_words
+        self.radius = radius
 
         try:
             self.driver = webdriver.Chrome(executable_path='/home/kyle/Downloads/chromedriver')
@@ -55,8 +60,14 @@ class IndeedScraper:
         what.send_keys(self.job_title)
         where.send_keys(self.location)
 
+        # Clicking the search button
         find_jobs_button = self.driver.find_element_by_class_name('icl-Button--primary')
         find_jobs_button.click()
+
+        # Setting the radius to the given distance
+        if self.location:
+            select_radius = Select(self.driver.find_element_by_id('distance_selector'))
+            select_radius.select_by_visible_text(f'within {self.radius} miles')
 
     def next_page(self):
         # Attempts to call the next page
@@ -176,7 +187,7 @@ class IndeedScraper:
 if __name__ == '__main__':
     starting_page = 1
     key_words = ['scientist', 'research', 'engineer', 'analyst', 'data']
-    s = IndeedScraper('Data Scientist', key_words=key_words, starting_page=starting_page)
+    s = IndeedScraper('Data Scientist', key_words=key_words, starting_page=starting_page, location='Chicago', radius=10)
 
     count = starting_page
 
