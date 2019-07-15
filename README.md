@@ -2,14 +2,14 @@
 Version 0.5
 
 ## Contents
-1.0	Direction
-2.0	Semantic Comparisons
-2.1	Job Descriptions to Job Descriptions
-2.2	Job Descriptions to Resumes
-3.0	Methodology
-3.1	Mechanics
-3.2	Data Science
-4.0	Next Steps
+* 1.0	Direction
+* 2.0	Semantic Comparisons
+* 2.1	Job Descriptions to Job Descriptions
+* 2.2	Job Descriptions to Resumes
+* 3.0	Methodology
+* 3.1	Mechanics
+* 3.2	Data Science
+* 4.0	Next Steps
 
 
 ## 1.0 Direction
@@ -54,10 +54,10 @@ The vertical striped shape indicates that some of the resumes were very differen
 
 ### 3.1 Mechanics
 
-#### 3.1.1 Python 3.7 on HP Pavilion Windows 10
-#### 3.1.2 Django API attached to sqlite3 database
-#### 3.1.3 HTML front end
-#### 3.1.4 Elastic Beanstalk deployment from AWS
+* Python 3.7 on HP Pavilion Windows 10
+* Django API attached to sqlite3 database
+* HTML front end
+* Elastic Beanstalk deployment from AWS
 
 
 ## 3.2 Data Science
