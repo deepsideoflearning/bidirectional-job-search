@@ -42,16 +42,15 @@ On this heatmap, the darker coordinates identify higher similarity. Job descript
 
 Next, we ran it on 100 job descriptions, comparing them to each other, making 100x100 (10,000) comparisons. This took 10 hours to run on my laptop, and produced the following heatmaps on two sets of data, the first generating the reflexive section as well:
  
-![JD2JD Heatmap 1](https://github.com/deepersideoflearning/bidirectional-job-search/tree/master/images/JD2JD_Heatmap.jpg)
-![JD2JD Heatmap 2](https://github.com/deepersideoflearning/bidirectional-job-search/tree/master/images/JD2JD_Heatmap2.jpg)
+<img src="images/JD2JD_Heatmap.jpg">
+<img src="images/JD2JD_Heatmap2.jpg">
   
  
 ## 2.1 Resumes to Job Descriptions
 
 Lastly, after pulling a set of annotated 219 unique resumes found on Kaggle, the raw content was separated and then compared to the job descriptions using the same distance measurement. The resulting heat map on 100 of the 219 is as follows:
 
-![JD2Res heatmap](https://github.com/deepersideoflearning/bidirectional-job-search/tree/master/images/JD2Res_heatmap.jpg)
-
+<img src="images/JD2Res_heatmap.jpg">
  
 The vertical striped shape indicates that some of the resumes were very different from all of the job descriptions collected, where some resumes matched more closely across the board. The horizontal bright stripes would indicate job descriptions that are not closely matching any or many of the resumes.
 
@@ -90,6 +89,6 @@ Much work is to be done (not in this order) including:
 
 ## 5.0 References
 
-* [Stanford GloVe Embeddings] (https://nlp.stanford.edu/projects/glove/)
+* <a href="https://nlp.stanford.edu/projects/glove/">Stanford GloVe Embeddings</a>
 * [Bidirectional Job Matching through Unsupervised Feature Learning] (https://pdfs.semanticscholar.org/31b7/2f37331323d5562815b99d0be38ef6e17dc3.pdf)
 
