@@ -34,7 +34,8 @@ Initially, the resume import was not yet complete, but 6,786 unique job descript
 Initially, we show a visual comparison of JDs by a semantic analysis of the text section of the resume.
  
 It is not a fast process, about ten seconds per comparison on my personal laptop. I initially ran it on only 10 job descriptions, and the comparison can be represented in a heatmap as thus:
- 
+
+![JD2JD Small Heatmap](https://github.com/deepersideoflearning/bidirectional-job-search/tree/master/images/JD2JD_small_Heatmap.jpg)
  
  
 On this heatmap, the darker coordinates identify higher similarity. Job descriptions 1 and 2 are similar, as well as 8 and 9. As well, every job description is similar to itself. Verifying that these similarities are actually accurate is quite easy, taking a look directly at the job descriptions compared. See attached for the associated Job Descriptions.
@@ -69,22 +70,22 @@ Here we used a 50 dimension vector to represent each word in a job description, 
 ## 4.0 Next Steps
 
 Much work is to be done (not in this order) including:
-•	Review results, noting and counting all similar job descriptions for verification.
-•	Sorting on distance combinations of similar job descriptions, resulting in a recommendation engine.
-•	Further cleaning of textual data, removing duplicates and reducing corpus size by simplifying the word list with different standard and specific preprocessing methods.
-•	Adding statistical analysis and analytics of datasets.
-•	Trying different word embeddings for speed and accuracy of measurement.
-•	Trying different distance measures for speed and accuracy.
-•	Pulling more and varied job descriptions.
-•	Pull job descriptions from other repositories (besides Indeed).
-•	Gathering resumes for matching.
-•	Adding other components described in source paper (Bidirectional Job Matching through Unsupervised Feature Learning)
-•	Moving to AWS and creating API for deployment via Elastic Beanstalk.
-•	Deploy simple Java Script front end to extend the user base.
-•	Add continual building of job descriptions database to productionalize pipeline.
+* Review results, noting and counting all similar job descriptions for verification.
+* Sorting on distance combinations of similar job descriptions, resulting in a recommendation engine.
+* Further cleaning of textual data, removing duplicates and reducing corpus size by simplifying the word list with different standard and specific preprocessing methods.
+* Adding statistical analysis and analytics of datasets.
+* Trying different word embeddings for speed and accuracy of measurement.
+* Trying different distance measures for speed and accuracy.
+* Pulling more and varied job descriptions.
+* Pull job descriptions from other repositories (besides Indeed).
+* Gathering resumes for matching.
+* Adding other components described in source paper (Bidirectional Job Matching through Unsupervised Feature Learning)
+* Moving to AWS and creating API for deployment via Elastic Beanstalk.
+* Deploy simple Java Script front end to extend the user base.
+* Add continual building of job descriptions database to productionalize pipeline.
 
 ## 5.0 References
 
-Stanford GloVe Embeddings
-Bidirectional Job Matching through Unsupervised Feature Learning
+[Stanford GloVe Embeddings] (https://nlp.stanford.edu/projects/glove/)
+[Bidirectional Job Matching through Unsupervised Feature Learning] (https://pdfs.semanticscholar.org/31b7/2f37331323d5562815b99d0be38ef6e17dc3.pdf)
 
