@@ -90,5 +90,5 @@ Much work is to be done (not in this order) including:
 ## 5.0 References
 
 * <a href="https://nlp.stanford.edu/projects/glove/">Stanford GloVe Embeddings</a>
-* [Bidirectional Job Matching through Unsupervised Feature Learning] (https://pdfs.semanticscholar.org/31b7/2f37331323d5562815b99d0be38ef6e17dc3.pdf)
+* <a href="https://pdfs.semanticscholar.org/31b7/2f37331323d5562815b99d0be38ef6e17dc3.pdf" target="_blank">Bidirectional Job Matching through Unsupervised Feature Learning<\a>
 
