@@ -35,7 +35,7 @@ Initially, we show a visual comparison of JDs by a semantic analysis of the text
  
 It is not a fast process, about ten seconds per comparison on my personal laptop. I initially ran it on only 10 job descriptions, and the comparison can be represented in a heatmap as thus:
 
-![JD2JD Small Heatmap](https://github.com/deepersideoflearning/bidirectional-job-search/tree/master/images/JD2JD_small_Heatmap.jpg)
+<img src="images/JD2JD_small_Heatmap.jpg">
  
  
 On this heatmap, the darker coordinates identify higher similarity. Job descriptions 1 and 2 are similar, as well as 8 and 9. As well, every job description is similar to itself. Verifying that these similarities are actually accurate is quite easy, taking a look directly at the job descriptions compared. See attached for the associated Job Descriptions.
