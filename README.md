@@ -2,14 +2,14 @@
 Version 0.5
 
 ## Contents
-* 1.0	Direction
-* 2.0	Semantic Comparisons
-** 2.1	Job Descriptions to Job Descriptions
-** 2.2	Job Descriptions to Resumes
-* 3.0	Methodology
-** 3.1	Mechanics
-** 3.2	Data Science
-* 4.0	Next Steps
+- 1.0	Direction
+- 2.0	Semantic Comparisons
+ - 2.1	Job Descriptions to Job Descriptions
+ - 2.2	Job Descriptions to Resumes
+- 3.0	Methodology
+ - 3.1	Mechanics
+ - 3.2	Data Science
+- 4.0	Next Steps
 
 
 ## 1.0 Direction
