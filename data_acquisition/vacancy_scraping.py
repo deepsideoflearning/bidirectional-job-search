@@ -1,11 +1,13 @@
 from IndeedScraper import IndeedScraper
 import os
-import shutil
 import csv
 import tarfile
+from datetime import datetime
 
 path = './raw_data/'
-file_name = 'job_postings.csv'
+now = datetime.now()
+file_name = now.strftime('%Y-%m-%d') + '_job_postings.csv'
+
 
 def main():
     locations = {
@@ -56,14 +58,6 @@ def main():
     ]
     starting_page = 1
 
-    # Removing the directory if it exists
-    try:
-        shutil.rmtree(path)
-    except FileNotFoundError:
-        pass
-
-    os.mkdir(path)
-
     for location in locations.keys():
         scraper = IndeedScraper('Data Scientist',
                                 location=location,
@@ -93,11 +87,19 @@ def main():
 
                 continue
 
-            with open(path+file_name, 'a') as file:
-                dict_writer = csv.DictWriter(file, keys)
-                if count == 1:
-                    dict_writer.writeheader()
-                dict_writer.writerows(data)
+            try:
+                with open(path+file_name, 'a') as file:
+                    dict_writer = csv.DictWriter(file, keys)
+                    if count == 1:
+                        dict_writer.writeheader()
+                    dict_writer.writerows(data)
+            except FileNotFoundError:
+                os.mkdir(path)
+                with open(path+file_name, 'a') as file:
+                    dict_writer = csv.DictWriter(file, keys)
+                    if count == 1:
+                        dict_writer.writeheader()
+                    dict_writer.writerows(data)
 
             del data
 

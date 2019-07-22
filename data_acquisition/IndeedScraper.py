@@ -126,10 +126,15 @@ class IndeedScraper:
             # Moving onto the next link if the title doesn't contain an appropriate key word
             if all(key_word not in posting_title for key_word in self.key_words):
                 continue
+
+            # Saving Title data
             posting_data['Title'] = posting_title
 
             url = soup.a['href']
             self.load_page(base_url+url)
+
+            # Saving the url data
+            posting_data['Url'] = base_url+url
 
             if base_url not in self.driver.current_url:
                 # If this executes, the driver has left indeed due to following some recommended
